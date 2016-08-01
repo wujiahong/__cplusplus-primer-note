@@ -1,0 +1,81 @@
+#Chapter One
+
+1、preprocessor include driective
+
+source file define style:
+#ifndef DEBGU
+#define DEBUG
+#endif
+
+shell code define style:
+$CC -DDEBUG -o main main.c
+
+using:if the DEBUG flag is not define, then the code inside {#ifdef #endif} will ignore.
+
+#ifdef DEBGU
+	cout<<"out put you debug info"<<endl;
+#endif
+
+2、alogrithm
+
+#include <alogrithm>
+
+search function:
+
+find(vector.begin(), vector.end(), target), this function return the  
+
+find_if(vector.begin(), vector.end(), pred), pred is a function with bool ruturn and vector element as parameter, which judge the iterator of vector is sutible for the  condiction.
+e.g:
+bool pred(ElemType* element){
+	if(element.getData() == target){
+		return true;
+	}
+	return false;
+}
+
+search(vector1.begin(), vector1.end(), vector2.begin(), vector2.end()), this function find the sub vector which in the example is vector2 in vector1, and return the first position of the sub vector in vector1.
+
+binary_search();
+count();
+count_if();
+
+
+sorting funtion:
+sort(vector.begin(), vector.end());
+partial_sort();
+merge();
+partition();
+rotate();
+reverse();
+random_shuffle();
+
+delete function:
+unique();
+remove();
+
+numeric function:
+accumulate();
+partial_sum();
+inner_product();
+adjacent_difference();
+
+generation function:
+generate();
+fill();
+transformation();
+copy();
+for_each();
+
+relation:
+equal();
+min();
+max();
+
+replace(vector.begin(), vector.end(), source, target);
+
+
+
+
+
+
+
